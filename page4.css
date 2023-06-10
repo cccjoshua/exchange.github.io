@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    justify-content:space-between;   
+}
+
+/* schoolContainer */
+.schoolContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* 調整容器元素的高度，以充滿整個視窗高度 */
+}
+
+.container div{
+    width: 350px;
+    height: 20px;
+    border: 1px solid white;
+    text-align: center;
+    background-color: black;
+    color: white;
+} 
+.container div:hover{
+    background-color:white;
+    color: black;
+    flex-grow: 1;
+    height: 60px;
+    transition: 0.5s ease-out;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+
+
+
+/* 表格 */
+.schoolListTable{
+    border-collapse:collapse;
+    margin: auto;
+    height:500px;
+    font-size: 1.3em;
+    margin: 0 auto;
+    width: 50%; /* 調整表格的寬度 */
+}
+

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS\page2.css">
+    <link rel="stylesheet" href="CSS/all.css">
+
+     <!-- button -->
+     <script>
+        window.addEventListener('scroll', function() {
+          var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          var windowHeight = window.innerHeight;
+          var fullHeight = document.documentElement.scrollHeight;
+    
+          var backToTopBtn = document.getElementById('backToTopBtn');
+    
+          if (scrollPosition > fullHeight - windowHeight - 20) {
+            backToTopBtn.classList.add('showBtn');
+          } else {
+            backToTopBtn.classList.remove('showBtn');
+          }
+        });
+    
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      </script>
+</head>
+
+<body>
+    <!-- <header><img src="IMG/back.png" alt="Logo"></header> -->
+    <div class="back_g">
+      <img  src="IMG/back03.jpg" width="100%" height="100%" style="display:block; margin:auto;">
+   
+    <nav class="nav">
+      <a href="page1.html">首頁</a>
+      <a href="page2.html">系上交換</a>
+      <a href="page3.html">校級交換</a>
+      <a href="page4.html">落點分析</a>
+    </nav>
+
+    <div class="header_01">資工系交換學生</div>
+    <table>
+           <tr>
+            <th>學校</th>
+            <th>簡介</th>
+            <th>甄選對象</th>
+            <th>世界排名</th>
+            <th>學校網址</th>
+           </tr>
+
+           <tr>
+            <th>北京交通大學</th>
+            <th>北京交通大學同意根據學生意願，每學年互派大學生與研究生到對方學校學習1個學期。<br>交換生名額為每學期兩人次(大學生與研究生各1位)，每1人次交換生以就讀1學期為原則。<br>本次甄選活動為甄選大三有意前往北京交通大學擔任交換生的同學。</th>
+            <th>當學年度升大三同學或研究生</th>
+            <th>801+</th>
+            <th><a href="https://www.bjtu.edu.cn/" target="_blank">北京交通大學</a></th>
+           </tr>
+
+           <tr>
+            <th>日本會津大學</th>
+            <th>本次甄選活動為甄選有意前往日本會津大學擔任交換生之同學。<br>(日本會津大學之入學時間為4月或10月)。</th>
+            <th>甄選對象：當學年度升碩二</th>
+            <th>801-</th>
+            <th><a href="https://u-aizu.ac.jp/" target="_blank">日本會津大學</a></th>
+           </tr>
+    </table>
+
+    <!-- 動畫 -->
+    <!-- 點選方塊以得知學校的代表色為何？ -->
+    <div class="q3_transition">
+        <h1 class="a_color">猜猜看學校的代表色是什麼？</h1>
+        
+        <div class="box">
+          <div class="a1">
+            <p>北京交通大學</p>
+          </div>
+
+          <div class="a2">
+            <p>日本會津大學</p>
+          </div>
+        </div>
+        <p class="box_p">(小提示：將游標放在學校名稱上，即可知道答案)</p>
+        
+
+        <h1 class="a_num">學生總人數概況</h1>
+        <div class="box_num">
+          <p>北京交通大學</p>
+          <div class="b2">28,760（人）</div>
+          <p>日本會津大學</p>
+          <div class="b1">1,337(人) </div>
+        </div>
+        <p class="a_num_p">(小提示：將游標放在長條圖上，即可查看)</p>
+    </div>
+    
+
+
+     <!-- Backt to Top -->
+    <button id="backToTopBtn" onclick="scrollToTop()">&#8593;</button>
+    <!-- footer -->
+    <div class="foot">Copyright&copy 2023 CSIE版權所有<br>網頁建置：張家郡  </div>
+
+</body>
+</html>

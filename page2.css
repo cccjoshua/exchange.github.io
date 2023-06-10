@@ -1,0 +1,176 @@
+
+table{
+    border-collapse:collapse;
+    margin: auto;
+    width:100%;
+    height:500px;
+    font-size: 1.3em;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+th{
+    border: 1px solid black;
+}
+caption{
+    background-color:  rgb(108, 115, 126);
+}
+
+tr:nth-child(odd){
+    background-color:     rgb(232, 236, 241);
+}
+tr:nth-child(even){
+    background-color: #ffffff;
+}
+
+
+
+/* q3 transition */
+.q3_transition{
+    background-color:  rgb(232, 236, 241);
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.a_color{
+    background-color: antiquewhite;
+    font-size: 2em;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    border: 5px solid white;
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.box{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box_p{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 0%; 
+    margin-bottom: 0%;
+}
+
+.a1{
+    background-color: rgb(232, 238, 240);
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+    transition: 0.8s linear;    
+}
+
+.a2{
+    background-color: rgb(231, 238, 240);
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+    transition: 0.8s linear;    
+}
+
+.a1:hover{
+    background-color: rgb(0,92,172);
+     
+ }
+ 
+ .a2:hover{
+     background-color: rgb(2,133,128); 
+  }
+
+.a_num{
+    background-color: antiquewhite;
+    font-size: 2em;
+    margin-top: 0%; 
+    margin-bottom: 0%;
+    border: 5px solid white;
+    font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a_num_p{
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 0%; 
+    margin-bottom: 0%;
+}
+
+.box_num{
+    padding-left: 300px;
+}
+
+.box_num p{
+    font-size: 1.5em;
+}
+
+.box_num h3{
+    font-size: 1.6em;
+}
+
+
+.b1{
+    background-color: lightblue;
+    color:transparent;
+    text-align: center;
+    font-size: 1.8em;
+    height: 80px;
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+    transition: 1s linear;
+}
+
+.b2{
+    background-color: lightblue;
+    color:transparent;
+    text-align: center;
+    font-size: 1.8em;
+    height: 80px;
+    width: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px;
+    transition: 1s linear;
+}
+
+.b1:hover{
+    width:50px;
+    color:black;
+}
+
+.b2:hover{
+    width:1100px;
+    color:black;
+}
+
+
+
+
+
+

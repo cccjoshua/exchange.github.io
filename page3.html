@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS\page3.css">
+    <link rel="stylesheet" href="CSS/all.css">
+
+     <!-- button -->
+     <script>
+        window.addEventListener('scroll', function() {
+          var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          var windowHeight = window.innerHeight;
+          var fullHeight = document.documentElement.scrollHeight;
+    
+          var backToTopBtn = document.getElementById('backToTopBtn');
+    
+          if (scrollPosition > fullHeight - windowHeight - 20) {
+            backToTopBtn.classList.add('showBtn');
+          } else {
+            backToTopBtn.classList.remove('showBtn');
+          }
+        });
+    
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      </script>
+</head>
+
+<body>
+    <div class="back_g">
+        <img  src="IMG/back03.jpg" width="100%" height="100%" style="display:block; margin:auto;">
+   
+    <nav class="nav">
+        <a href="page1.html">首頁</a>
+        <a href="page2.html">系上交換</a>
+        <a href="page3.html">校級交換</a>
+        <a href="page4.html">落點分析</a>
+    </nav>
+
+    <div class="header_01">校級交換學生</div>
+
+    <!-- <h1 class="topic1">選擇想要了解的國家</h1> -->
+     <!-- 國家字卡 -->
+     <div class="country_list">
+        <div class="country-card">
+            <h3>美國</h3>
+            <p>有8間學校提供交換</p>
+        </div>
+
+        <div class="country-card">
+            <h3>澳洲</h3>
+            <p>有2間學校提供交換</p>
+        </div>
+
+        <div class="country-card">
+            <h3>歐洲</h3>
+            <p>有17間學校提供交換</p>
+        </div>
+
+        <div class="country-card">
+            <h3>日本</h3>
+            <p>有5間學校提供交換</p>
+        </div>
+
+        <div class="country-card">
+            <h3>韓國</h3>
+            <p>有9間學校提供交換</p>
+        </div>
+    </div>
+     <!-- 國家字卡end -->
+    
+    <!-- 各國學校表單一覽表 -->
+      <div class="schoolList">各國學校一覽表</div>
+     <!--schoolListContainer  -->
+    <div class="schoolListContainer">
+        <!-- start -->
+        <div class="schoolBlock"></div>
+        <select id="tableSelect" onchange="showTable()">
+            <option value="">選擇國家</option>
+            <option value="UsTable">美國</option>
+            <option value="AustraliaTable">澳洲</option>
+            <option value="EuropeTable">歐洲</option>
+            <option value="JapanTable">日本</option>
+            <option value="KoreaTable">韓國</option>
+        </select>
+    
+        <table id="UsTable" class="table-container">
+            <!-- 美國的内容 -->
+            <caption>美國</caption>
+            <tr>
+                <th>序列</th>
+                <th>學校</th>
+                <th>名額</th>
+                <th>申請條件</th>
+                <th>網站連結</th>
+            </tr>
+    
+            <tr>
+                <td>1</td>
+                <td>加州州立大學長堤分校</td>
+                <td>1</td>
+                <td>TOEFL iBT 70/ IELTS 5.5</td>
+                <td><a href="https://www.csulb.edu "  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>西佛羅里達大學</td>
+                <td>4</td>
+                <td>TOEFL iBT 71 with min. 19 in listening / IELTS 6.0 with min. 6 in listening</td>
+                <td><a href="https://uwf.edu"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>賓州印地安那大學</td>
+                <td>1</td>
+                <td>TOEFL iBT 70/ IELTS 6.0</td>
+                <td><a href="https://www.iup.edu"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>4</td>
+                <td>天普大學</td>
+                <td>2</td>
+                <td>TOEFL iBT 79 / IELTS 6.0</td>
+                <td><a href="https://www.temple.edu "  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>5</td>
+                <td>聖道大學</td>
+                <td>1</td>
+                <td>TOEFL iBT 79 / IELTS 6.5</td>
+                <td><a href="https://www.uiw.edu"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>6</td>
+                <td>加州州立大學沙加緬度分校</td>
+                <td>2</td>
+                <td>TOEFL iBT 70(do not accept MyBest scores) / IELTS 6.0</td>
+                <td><a href="https://www.csus.edu"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>7</td>
+                <td>加州州立大學史坦勞尼斯分校</td>
+                <td>1</td>
+                <td>TOEFL iBT 70 (do not accept MyBest scores) / IELTS 6.0</td>
+                <td><a href="https://www.csustan.edu/class-schedule"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>8</td>
+                <td>新澤西學院</td>
+                <td>2</td>
+                <td>TOEFL iBT 90 (do not accept MyBest scores) / IELTS 7.0</td>
+                <td><a href="https://tcnj.edu"  target="_blank">Click</a></td>
+            </tr>
+        </table>
+    
+        <table id="AustraliaTable" class="table-container">
+            <!-- 澳洲的内容 -->
+            <caption>澳洲</caption>
+            <tr>
+                <th>序列</th>
+                <th>學校</th>
+                <th>名額</th>
+                <th>申請條件</th>
+                <th>網站連結</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>昆士蘭理工大學</td>
+                <td>1</td>
+                <td>TOEFL overall score 79 with min. 21 in writing, 16 in reading, 16 in listening,  18 in speaking</td>
+                <td><a href="https://www.unsw.edu.au"  target="_blank">Click</a></td>
+            </tr>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>西雪梨大學</td>
+                <td>1</td>
+                <td>TOEFL iBT overall 82 with min. 21 in writing, 18 in speaking, 13 in reading, 13 in listening</td>
+                <td><a href="https://www.westernsydney.edu.au"  target="_blank">Click</a></td>
+            </tr>
+            </tr>
+    
+        </table>
+    
+        <table id="EuropeTable" class="table-container">
+            <!-- 歐洲的内容 -->
+            <caption>歐洲表格</caption>
+            <tr>
+                <th>序列</th>
+                <th>學校</th>
+                <th>名額</th>
+                <th>申請條件</th>
+                <td>網站連結</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>英國桑德蘭大學</td>
+                <td>2</td>
+                <td>IELTS 6.0 （with 5.5 minimum in each element） / TOEFL is not acceptable</td>
+                <td><a href="https://www.sunderland.ac.uk"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>英國牛津布魯克斯大學</td>
+                <td>2</td>
+                <td>IELTS 6.0 (with 6.0 in reading and writing, 5.5 in listening and speaking) </td>
+                <td><a href="https://www.brookes.ac.uk"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>英國卡地夫大學</td>
+                <td>2</td>
+                <td>TOEFL iBT 70 (do not accept MyBest scores)  / IELTS 6.0</td>
+                <td><a href="https://www.cardiff.ac.uk"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>4</td>
+                <td>法國里昂第三大學</td>
+                <td>5</td>
+                <td>TOEFL iBT 80 with 20 at least for each section / IELTS 6.0</td>
+                <td><a href="https://www.univ-lyon3.fr"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>5</td>
+                <td>法國巴黎西岱大學</td>
+                <td>5</td>
+                <td>TOEFL iBT 90 / IELTS 5.5</td>
+                <td><a href="https://u-paris.fr/en/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>6</td>
+                <td>法國高等計算機子及自動化學校</td>
+                <td>5</td>
+                <td>CEFR B2 level(TOFEL iBT 72 / IELTS 5.5)/Strong programming and mathematics skills.</td>
+                <td><a href="https://www.esiea.fr/en/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>7</td>
+                <td>法國里爾大學</td>
+                <td>2</td>
+                <td>CEFR B2 level(TOFEL iBT 72 / IELTS 5.5)</td>
+                <td><a href="https://international.univ-lille.fr/en/come-to-the-university-of-lille/students/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>8</td>
+                <td>法國巴黎歐洲商學院</td>
+                <td>2</td>
+                <td>CEFR B2 level(TOFEL iBT 72 / IELTS 5.5)(國企系同學優先)</td>
+                <td><a href="https://www.ebs-paris.fr/entrevue-avec-damien-morin-le-jeune-prodige-de-la-french-tech/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>9</td>
+                <td>德國慕尼黑大學 </td>
+                <td>1</td>
+                <td>TOEFL iBT 90 / IELTS 5.5 </td>
+                <td><a href="https://www.lmu.de/de/index.html"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>10</td>
+                <td>比利時聖路易斯大學 </td>
+                <td>1</td>
+                <td>TOEFL iBT 70/ IELTS: 5.5 </td>
+                <td><a href="https://www.usaintlouis.be/sl/welcome.html"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>11</td>
+                <td>西班牙穆爾西亞大學</td>
+                <td>1</td>
+                <td>TOEFL iBT 72 (do not accept MyBest scores) / IELTS 6.0</td>
+                <td><a href="https://www.um.es/web/iwp/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>12</td>
+                <td>西班牙馬拉加大學</td>
+                <td>2</td>
+                <td>TOEFL iBT 70/ IELTS: 5.5</td>
+                <td><a href="https://www.uma.es/?set_language=en"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>13</td>
+                <td>西班牙拿瓦拉大學</td>
+                <td>2</td>
+                <td>TOEFL iBT 80 / IELTS 5.5</td>
+                <td><a href="https://en.unav.edu"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>14</td>
+                <td>西班牙聖保羅大學</td>
+                <td>2</td>
+                <td>CEFR B2 level(TOFEL iBT 72 / IELTS 5.5)/(Priority to Department of Architecture)</td>
+                <td><a href="https://www.uspceu.com"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>15</td>
+                <td>義大利羅馬大學</td>
+                <td>2</td>
+                <td>CEFR B2 level(TOFEL iBT 72 / IELTS 5.5)</td>
+                <td><a href="https://www.uniroma1.it/en/pagina-strutturale/home"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>16</td>
+                <td>匈牙利布達佩斯商學院 </td>
+                <td>2</td>
+                <td>TOEFL iBT 72 / IELTS 5.5</td>
+                <td><a href="https://uni-bge.hu/en"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>17</td>
+                <td>立陶宛維陶塔斯馬格努斯大學 </td>
+                <td>3</td>
+                <td>TOEFL iBT 72 / IELTS 5.5</td>
+                <td><a href="https://www.vdu.lt/en/"  target="_blank">Click</a></td>
+            </tr>
+        </table>
+    
+        <table id="JapanTable" class="table-container">
+            <!-- 日本的内容 -->
+            <caption>日本</caption>
+            <tr>
+                <th>序列</th>
+                <th>學校</th>
+                <th>名額</th>
+                <th>申請條件</th>
+                <th>網站連結</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>日本立命館亞洲太平洋大學</td>
+                <td>3</td>
+                <td>TOEFL: iBT 79(Not accept MyBest Score)/ IELTS 6.0/ TOEIC  780 </td>
+                <td><a href="https://en.apu.ac.jp/home/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>日本國際教養大學</td>
+                <td>3</td>
+                <td>TOEFL iBT 71/ IELTS 6.0 / TOEIC 785(Not accept students who is sophomore transfer or delay-graduation for application.)</td>
+                <td><a href="https://web.aiu.ac.jp/en/"  target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>日本龍谷大學 </td>
+                <td>2</td>
+                <td>TOEFL iBT 70/ IELTS: 5.5/ TOEFL PBT 500</td>
+                <td><a href="https://www.ryukoku.ac.jp/english2/" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>4</td>
+                <td>日本公立福岡女子大學</td>
+                <td>2</td>
+                <td>TOEFL iBT over70/ IELTS over5.5/TOEIC 800(Student can only choose customized program of Japanese Contemporary Culture. Limited credits will be recognized. )</td>
+                <td><a href="http://www.fwu.ac.jp" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>5</td>
+                <td>日本芝浦工業大學</td>
+                <td>5</td>
+                <td>CEFR B2(TOFEL iBT 72 / IELTS 5.5)(English-taught courses are mostly limited to Engineering programs./Student need to pay registration fee 30,000 JPY.)</td>
+                <td><a href="https://www.shibaura-it.ac.jp" target="_blank">Click</a></td>
+            </tr>
+    
+        </table>
+    
+        <table id="KoreaTable" class="table-container">
+            <!-- 韓國的内容 -->
+            <caption>韓國</caption>
+            <tr>
+                <th>序列</th>
+                <th>學校</th>
+                <th>名額</th>
+                <th>申請條件</th>
+                <th>網站連結</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>韓國慶熙大學</td>
+                <td>1</td>
+                <td>TOEFL  iBT 82/IELTS 6.5</td>
+                <td><a href="https://www.khu.ac.kr/eng/main/index.do" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>2</td>
+                <td>韓國中央大學</td>
+                <td>2</td>
+                <td>TOEFL  iBT 70/IELTS 5.5(Undergraduate);()</td>
+                <td><a href="https://neweng.cau.ac.kr/index.do" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>3</td>
+                <td>韓國京畿大學</td>
+                <td>5</td>
+                <td>TOEFL  iBT 70/IELTS 5.5</td>
+                <td><a href="http://www.kyonggi.ac.kr/KyonggiEng.kgu" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>4</td>
+                <td>韓國檀國大學</td>
+                <td>2</td>
+                <td>TOEFL  iBT 70/IELTS 5.5</td>
+                <td><a href="https://www.dankook.ac.kr/web/kor/home" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>5</td>
+                <td>韓國誠信女子大學</td>
+                <td>2</td>
+                <td>TOEFL  iBT 71/IELTS 5.5</td>
+                <td><a href="https://www.sungshin.ac.kr/sites/main_kor/main.jsp" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>6</td>
+                <td>韓國漢陽大學(首爾校區)</td>
+                <td>1</td>
+                <td>TOEFL  iBT 72/IELTS 5.5(Hanyang University is experiencing high demand for certain areas of the courses, especially in Business School. Students must be aware that it may be very difficult to register for these courses and their preferred choices of courses are NOT GUARANTEED. )</td>
+                <td><a href="https://www.hanyang.ac.kr/web/eng" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>7</td>
+                <td>韓國漢陽大學(ERICA校區)</td>
+                <td>2</td>
+                <td>TOEFL  iBT 72/IELTS 5.5</td>
+                <td><a href="https://www.hanyang.ac.kr/web/eng" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>8</td>
+                <td>韓國明知大學</td>
+                <td>2</td>
+                <td>TOEFL  iBT 70/IELTS 5.5（Does not accept Korean passport holders）</td>
+                <td><a href="https://www.mju.ac.kr/sites/mjukr/intro/intro.html" target="_blank">Click</a></td>
+            </tr>
+    
+            <tr>
+                <td>9</td>
+                <td>韓國慶南大學</td>
+                <td>2</td>
+                <td>TOEFL  iBT 70/IELTS 5.5（Does not accept Korean passport holders）</td>
+                <td><a href="https://www.kyungnam.ac.kr/sites/en/index..do" target="_blank">Click</a></td>
+            </tr>
+        </table>
+       
+    
+        <script>
+            function showTable() {
+                var selectElement = document.getElementById("tableSelect");
+                var tableId = selectElement.value;
+    
+                // 隱藏所有表格
+                var tables = document.getElementsByClassName("table-container");
+                for (var i = 0; i < tables.length; i++) {
+                    tables[i].style.display = "none";
+                }
+    
+                // 顯示選定的表格
+                if (tableId) {
+                    var selectedTable = document.getElementById(tableId);
+                    selectedTable.style.display = "block";
+                }
+            }
+        </script>
+        <!-- end -->
+    </div>
+    <!-- 各國學校一覽表end -->
+
+    <!-- slogan -->
+    <div class="slogan">
+        <h3>送給要申請交換學生的你/妳：<br></h3>
+        <h4>"Embrace the opportunity to broaden your horizons and chase your dreams abroad."
+        </h4> 
+    </div>
+
+
+
+    <!-- Backt to Top -->
+    <button id="backToTopBtn" onclick="scrollToTop()">&#8593;</button>
+    <!-- footer -->
+    <div class="foot">Copyright&copy 2023 CSIE版權所有<br>網頁建置：張家郡  </div>
+
+
+
+   
+</body>
+</html>

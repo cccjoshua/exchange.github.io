@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS\page4.css">
+    <link rel="stylesheet" href="CSS/all.css">
+
+     <!-- button -->
+     <script>
+        window.addEventListener('scroll', function() {
+          var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          var windowHeight = window.innerHeight;
+          var fullHeight = document.documentElement.scrollHeight;
+    
+          var backToTopBtn = document.getElementById('backToTopBtn');
+    
+          if (scrollPosition > fullHeight - windowHeight - 20) {
+            backToTopBtn.classList.add('showBtn');
+          } else {
+            backToTopBtn.classList.remove('showBtn');
+          }
+        });
+    
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      </script>
+</head>
+
+<body>
+    <!-- <header><img  src="IMG/back03.jpg" width="100%" height="100%" style="display:block; margin:auto;"></header> -->
+    <div class="back_g">
+      <img  src="IMG/back03.jpg" width="100%" height="100%" style="display:block; margin:auto;">
+
+    <nav class="nav">
+      <a href="page1.html">首頁</a>
+      <a href="page2.html">系上交換</a>
+      <a href="page3.html">校級交換</a>
+      <a href="page4.html">落點分析</a>
+    </nav>
+
+    <div class="header_01">托福成績落點分析</div>
+    <!-- 計算申請條件 -->
+   
+    <!-- schoolContainer -->
+    <div class="schoolContainer">
+      <!-- start -->
+      <label for="countryInput">請輸入國家：</label>
+      <input type="text" id="countryInput"><br>
+    
+      <label for="toeflInput">請輸入托福成績：</label>
+      <input type="number" id="toeflInput"><br>
+    
+      <button onclick="checkAdmission()">確定</button>
+    
+      <h2 id="result"></h2>
+    
+      <table id="schoolListTable">
+        <tr>
+          <th>學校名稱</th>
+          <th>錄取名額</th>
+        </tr>
+      </table>
+    
+      <script>
+        function checkAdmission() {
+          var countryInput = document.getElementById("countryInput").value;
+          var toeflInput = parseInt(document.getElementById("toeflInput").value);
+    
+          var resultDiv = document.getElementById("result");
+          var schoolListTable = document.getElementById("schoolListTable");
+    
+          clearTableRows(schoolListTable);
+    
+          if (countryInput === "" || isNaN(toeflInput)) {
+            resultDiv.innerHTML = "請輸入有效的國家和托福成績。";
+          } else {
+            switch (countryInput) {
+  
+              // 美國
+              case "美國":
+                resultDiv.innerHTML = "您選擇的國家是美國";
+                // 90
+                if (toeflInput >= 90 && toeflInput<=120) {
+                  addTableRow(schoolListTable, "加州州立大學長堤分校", "1");
+                  addTableRow(schoolListTable, "西佛羅里達大學", "4");
+                  addTableRow(schoolListTable, "賓州印地安那大學", "1");
+                  addTableRow(schoolListTable, "天普大學", "2");
+                  addTableRow(schoolListTable, "聖道大學", "1");
+                  addTableRow(schoolListTable, "加州州立大學沙加緬度分校", "2");
+                  addTableRow(schoolListTable, "加州州立大學史坦勞尼斯分校", "1");
+                  addTableRow(schoolListTable, "新澤西學院", "2");
+                  
+                  // 79
+                } else if (toeflInput >= 79 && toeflInput < 90) {
+                  addTableRow(schoolListTable, "天普大學", "2");
+                  addTableRow(schoolListTable, "聖道大學", "1");
+                  addTableRow(schoolListTable, "新澤西學院", "2");
+                  addTableRow(schoolListTable, "加州州立大學長堤分校", "1");
+                  addTableRow(schoolListTable, "西佛羅里達大學", "4");
+                  addTableRow(schoolListTable, "賓州印地安那大學", "1");
+                  addTableRow(schoolListTable, "加州州立大學沙加緬度分校", "2");
+                  addTableRow(schoolListTable, "加州州立大學史坦勞尼斯分校", "1");
+  
+                  // 70
+                } else if (toeflInput >= 70 && toeflInput < 79) {
+                  addTableRow(schoolListTable, "加州州立大學長堤分校", "1");
+                  addTableRow(schoolListTable, "西佛羅里達大學", "4");
+                  addTableRow(schoolListTable, "賓州印地安那大學", "1");
+                  addTableRow(schoolListTable, "加州州立大學沙加緬度分校", "2");
+                  addTableRow(schoolListTable, "加州州立大學史坦勞尼斯分校", "1");
+                } else {
+                  addTableRow(schoolListTable, "您的分數未達到任何美國大學的申請標準。", "-");
+                }
+                break;
+  
+               // 澳洲
+              case "澳洲":
+                resultDiv.innerHTML = "您選擇的國家是澳洲";
+                if (toeflInput >= 82 && toeflInput<=120) {
+                  addTableRow(schoolListTable, "西雪梨大學", "1");
+                  addTableRow(schoolListTable, "昆士蘭理工大學", "1");
+                } else if (toeflInput >= 79 && toeflInput < 82) {
+                  addTableRow(schoolListTable, "昆士蘭理工大學", "1");
+                } else {
+                  addTableRow(schoolListTable, "您的分數未達到任何澳洲大學的申請標準。", "-");
+                }
+                break;
+  
+                 // 歐洲
+              case "歐洲":
+                resultDiv.innerHTML = "您選擇的國家是歐洲";
+  
+                // 90
+                if (toeflInput >= 90 && toeflInput<=120) {
+                  addTableRow(schoolListTable, "法國巴黎西岱大學", "5");
+                  addTableRow(schoolListTable, "德國慕尼黑大學", "1");
+                  addTableRow(schoolListTable, "法國里昂第三大學", "5");
+                  addTableRow(schoolListTable, "西班牙拿瓦拉大學", "2");
+                  addTableRow(schoolListTable, "法國高等計算機子及自動化學校", "5");
+                  addTableRow(schoolListTable, "法國里爾大學", "2");
+                  addTableRow(schoolListTable, "法國巴黎歐洲商學院", "2");
+                  addTableRow(schoolListTable, "西班牙穆爾西亞大學", "1");
+                  addTableRow(schoolListTable, "西班牙聖保羅大學", "2");
+                  addTableRow(schoolListTable, "義大利羅馬大學", "2");
+                  addTableRow(schoolListTable, "匈牙利布達佩斯商學院", "2");
+                  addTableRow(schoolListTable, "立陶宛維陶塔斯馬格努斯大學", "3");
+                  addTableRow(schoolListTable, "英國卡地夫大學", "2");
+                  addTableRow(schoolListTable, "比利時聖路易斯大學", "1");
+                  addTableRow(schoolListTable, "西班牙馬拉加大學", "2");
+  
+                  // 80
+                } else if (toeflInput >= 80 && toeflInput < 90) {
+                  addTableRow(schoolListTable, "法國里昂第三大學", "5");
+                  addTableRow(schoolListTable, "西班牙拿瓦拉大學", "2");
+                  addTableRow(schoolListTable, "法國高等計算機子及自動化學校", "5");
+                  addTableRow(schoolListTable, "法國里爾大學", "2");
+                  addTableRow(schoolListTable, "法國巴黎歐洲商學院", "2");
+                  addTableRow(schoolListTable, "西班牙穆爾西亞大學", "1");
+                  addTableRow(schoolListTable, "西班牙聖保羅大學", "2");
+                  addTableRow(schoolListTable, "義大利羅馬大學", "2");
+                  addTableRow(schoolListTable, "匈牙利布達佩斯商學院", "2");
+                  addTableRow(schoolListTable, "立陶宛維陶塔斯馬格努斯大學", "3");
+                  addTableRow(schoolListTable, "英國卡地夫大學", "2");
+                  addTableRow(schoolListTable, "比利時聖路易斯大學", "1");
+                  addTableRow(schoolListTable, "西班牙馬拉加大學", "2");
+  
+                  // 72
+                } else if (toeflInput >= 72 && toeflInput < 80) {
+                  addTableRow(schoolListTable, "法國高等計算機子及自動化學校", "5");
+                  addTableRow(schoolListTable, "法國里爾大學", "2");
+                  addTableRow(schoolListTable, "法國巴黎歐洲商學院", "2");
+                  addTableRow(schoolListTable, "西班牙穆爾西亞大學", "1");
+                  addTableRow(schoolListTable, "西班牙聖保羅大學", "2");
+                  addTableRow(schoolListTable, "義大利羅馬大學", "2");
+                  addTableRow(schoolListTable, "匈牙利布達佩斯商學院", "2");
+                  addTableRow(schoolListTable, "立陶宛維陶塔斯馬格努斯大學", "3");
+                  addTableRow(schoolListTable, "英國卡地夫大學", "2");
+                  addTableRow(schoolListTable, "比利時聖路易斯大學", "1");
+                  addTableRow(schoolListTable, "西班牙馬拉加大學", "2");
+  
+                    // 70
+                } else if (toeflInput >= 70 && toeflInput < 72) {
+                  addTableRow(schoolListTable, "英國卡地夫大學", "2");
+                  addTableRow(schoolListTable, "比利時聖路易斯大學", "1");
+                  addTableRow(schoolListTable, "西班牙馬拉加大學", "2");
+  
+                } else {
+                  addTableRow(schoolListTable, "您的分數未達到任何歐洲大學的申請標準。", "-");
+                }
+                break;
+  
+              // 日本
+              case "日本":
+                resultDiv.innerHTML = "您選擇的國家是日本";
+                // 79
+                if (toeflInput >= 79 && toeflInput<=120) {
+                  addTableRow(schoolListTable, "日本立命館亞洲太平洋大學", "3");
+                  addTableRow(schoolListTable, "日本芝浦工業大學", "5");
+                  addTableRow(schoolListTable, "日本國際教養大學", "3");
+                  addTableRow(schoolListTable, "日本龍谷大學", "2");
+                  addTableRow(schoolListTable, "日本公立福岡女子大學", "2");
+                  
+                  // 72
+                } else if (toeflInput >= 79 && toeflInput < 79) {
+                  addTableRow(schoolListTable, "日本芝浦工業大學", "5");
+                  addTableRow(schoolListTable, "日本國際教養大學", "3");
+                  addTableRow(schoolListTable, "日本龍谷大學", "2");
+                  addTableRow(schoolListTable, "日本公立福岡女子大學", "2");
+                
+  
+                  // 71
+                } else if (toeflInput >= 71 && toeflInput < 72) {
+                  addTableRow(schoolListTable, "日本國際教養大學", "3");
+                  addTableRow(schoolListTable, "日本龍谷大學", "2");
+                  addTableRow(schoolListTable, "日本公立福岡女子大學", "2");
+                
+                // 70
+                } else if (toeflInput >= 70 && toeflInput < 71) {
+                  addTableRow(schoolListTable, "日本龍谷大學", "2");
+                  addTableRow(schoolListTable, "日本公立福岡女子大學", "2");
+  
+                } else {
+                  addTableRow(schoolListTable, "您的分數未達到任何日本大學的申請標準。", "-");
+                }
+                break;
+  
+                 // 韓國
+              case "韓國":
+                resultDiv.innerHTML = "您選擇的國家是韓國";
+                // 82
+                if (toeflInput >= 82 && toeflInput<=120) {
+                  addTableRow(schoolListTable, "韓國慶熙大學", "1");
+                  addTableRow(schoolListTable, "韓國漢陽大學(首爾校區)", "1");
+                  addTableRow(schoolListTable, "韓國漢陽大學(ERICA校區)", "2");
+                  addTableRow(schoolListTable, "韓國誠信女子大學", "2");
+                  addTableRow(schoolListTable, "韓國中央大學", "2");
+                  addTableRow(schoolListTable, "韓國京畿大學", "5");
+                  addTableRow(schoolListTable, "韓國檀國大學", "2");
+                  addTableRow(schoolListTable, "韓國明知大學", "2");
+                  addTableRow(schoolListTable, "韓國慶南大學", "2");
+                  
+                  // 72
+                } else if (toeflInput >= 72 && toeflInput < 82) {
+                  addTableRow(schoolListTable, "韓國漢陽大學(首爾校區)", "1");
+                  addTableRow(schoolListTable, "韓國漢陽大學(ERICA校區)", "2");
+                  addTableRow(schoolListTable, "韓國誠信女子大學", "2");
+                  addTableRow(schoolListTable, "韓國中央大學", "2");
+                  addTableRow(schoolListTable, "韓國京畿大學", "5");
+                  addTableRow(schoolListTable, "韓國檀國大學", "2");
+                  addTableRow(schoolListTable, "韓國明知大學", "2");
+                  addTableRow(schoolListTable, "韓國慶南大學", "2");
+                
+                
+  
+                  // 71
+                } else if (toeflInput >= 71 && toeflInput < 72) {
+                  addTableRow(schoolListTable, "韓國誠信女子大學", "2");
+                  addTableRow(schoolListTable, "韓國中央大學", "2");
+                  addTableRow(schoolListTable, "韓國京畿大學", "5");
+                  addTableRow(schoolListTable, "韓國檀國大學", "2");
+                  addTableRow(schoolListTable, "韓國明知大學", "2");
+                  addTableRow(schoolListTable, "韓國慶南大學", "2");
+                 
+                
+                // 70
+                } else if (toeflInput >= 70 && toeflInput < 71) {
+                  addTableRow(schoolListTable, "韓國中央大學", "2");
+                  addTableRow(schoolListTable, "韓國京畿大學", "5");
+                  addTableRow(schoolListTable, "韓國檀國大學", "2");
+                  addTableRow(schoolListTable, "韓國明知大學", "2");
+                  addTableRow(schoolListTable, "韓國慶南大學", "2");
+  
+                } else {
+                  addTableRow(schoolListTable, "您的分數未達到任何韓國大學的申請標準。", "-");
+                }
+                break;
+  
+              default:
+                resultDiv.innerHTML = "不支援該國家的入學標準判斷。";
+            }
+          }
+        }
+    
+        function addTableRow(table, schoolName, admissionQuota) {
+          var row = table.insertRow(-1);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          cell1.innerHTML = schoolName;
+          cell2.innerHTML = admissionQuota;
+        }
+    
+        function clearTableRows(table) {
+          while (table.rows.length > 1) {
+            table.deleteRow(1);
+          }
+        }
+      </script>
+      <!-- end -->
+    </div>
+
+   
+    <!-- 計算申請條件end -->
+
+
+    <!-- Backt to Top -->
+    <button id="backToTopBtn" onclick="scrollToTop()">&#8593;</button>
+
+    <!-- footer -->
+    <div class="foot">Copyright&copy 2023 CSIE版權所有<br>網頁建置：張家郡  </div>
+</body>
+</html>

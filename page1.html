@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS\page1.css"> 
+    <link rel="stylesheet" href="CSS/all.css">
+
+
+    <!-- button -->
+    <script>
+        window.addEventListener('scroll', function() {
+          var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+          var windowHeight = window.innerHeight;
+          var fullHeight = document.documentElement.scrollHeight;
+    
+          var backToTopBtn = document.getElementById('backToTopBtn');
+    
+          if (scrollPosition > fullHeight - windowHeight - 20) {
+            backToTopBtn.classList.add('showBtn');
+          } else {
+            backToTopBtn.classList.remove('showBtn');
+          }
+        });
+    
+        function scrollToTop() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      </script>
+
+</head>
+
+<body>
+<div class="back_g">
+  <img  src="IMG/back03.jpg" width="100%" height="100%" style="display:block; margin:auto;">
+</div>
+
+    <nav class="nav">
+        <a href="page1.html">首頁</a>
+        <a href="page2.html">系上交換</a>
+        <a href="page3.html">校級交換</a>
+        <a href="page4.html">落點分析</a>
+       
+    </nav>
+    
+    <div class="container">
+        <div class="q1grid">
+            <div class="header">資訊工程學系</div>
+            <div class="course">
+                <p>
+                  <h2>必修課程</h2>
+                  演算法<br>
+                  資料庫<br>
+                  程式語言<br>
+                  離散數學<br>
+                  機率統計<br>
+                  線性代數<br>
+                  資料結構<br>
+                  網路概論<br>
+                  作業系統<br>
+                  計算機概論<br>
+                  計算機組織<br>
+                  開源軟體實務<br>
+                  機器學習數學
+                </p>
+            </div>
+            <div class="intro">
+              <p>
+                <h2>簡介</h2>
+                成立於民國58年，以推廣計算機應用教育、培育國家及社會建設之高級資訊人才為目標。原名『電子計算機科學學系』，是國內最早創立之資訊相關科系。民國81年正式更名為『資訊工程學系』。</p>
+                </div>
+            <div class="article">
+              <p>
+                <h2>教育部標</h2>
+                推廣資訊科技教育、培育國家及社會建設之高級資訊人才<br>
+                A.通達專業知能<br>
+  
+                通達資訊軟體、硬體、網路運作之原理、技術、相關的數學理論與專業知能<br>
+                
+                B.熟練實用技能<br>
+                
+                學以致用，透過各種實驗與專題之執行，精通熟練解決問題所需的相關應用實務技能<br>
+                
+                C.展現學習成就<br>
+                
+                開展學習視野，善用網路資源，多元學習，增進獨立思考與創新能力</p>
+
+            </div>
+            <div class="about"><a href="http://www.csie.tku.edu.tw/main.aspx" target="_blank"><img  src="IMG/logo.png" width="200px" height="200px" style="display:block; margin:auto;" alt="TKU"></a></div>
+
+            <div class="information">
+            <p>
+              <h2>國際交流</h2>
+              系上交換學生<br>校級交換學生<br>大三出國計畫<br>
+            </p>
+            <a href="http://www.oieie.tku.edu.tw/" target="_blank">國際事務處</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 課程地圖 -->
+    <div class="course_intro">
+      <h2>課程設計</h2>
+      <p>資訊科技的發展日新月異，新穎嶄新的技術不斷地推陳出新，為了讓學生們可以與技術與時代接軌，並且因應變動之產業需求，資訊工程學系課程之規劃兼顧理論與實務，並且深度與廣度並重。在資訊工程系，每位學生都需修畢系上所規劃之「專業必修」課程，以奠定資訊領域之專業基礎。此外，系上亦規劃了與未來產業與趨勢相連結之「專業選修」課程。</p>
+    </div>
+    
+    <!-- 透過按鈕來開啟課程地圖 -->
+    <div class="button-container">
+      <button class="button_map" onclick="toggleImage()">開啟課程地圖 </button>
+    </div>
+  
+    <div class="image-container">
+      <img src="IMG/CSIE.jpeg" alt="圖片">
+    </div>
+  
+    <script>
+      function toggleImage() {
+        var imageContainer = document.querySelector('.image-container');
+        imageContainer.style.display = imageContainer.style.display === 'none' ? 'block' : 'none';
+      }
+    </script>
+    <!-- 透過按鈕來開啟課程地圖 -->
+
+    
+    <!-- Backt to Top -->
+    <button id="backToTopBtn" onclick="scrollToTop()">&#8593;</button>
+
+    <div class="foot">Copyright&copy 2023 CSIE版權所有<br>網頁建置：張家郡  </div>
+</body>
+</html>
